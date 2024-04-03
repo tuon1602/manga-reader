@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./providers/theme-provider";
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,16 +20,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} container py-10 max-md:py-0 `}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
+      <body>
+        <main
+          className={`${inter.className} container max-md:py-0  min-h-screen`}
         >
-          <Navbar/>
-          <main>
-              {children}
-          </main>
-        </ThemeProvider>
+          <ThemeProvider attribute="class" defaultTheme="system">
+            <Toaster position="top-center" richColors />
+            <Navbar />
+            <div className="mt-40 mb-20">{children}</div>
+            <Footer />
+          </ThemeProvider>
+        </main>
       </body>
     </html>
   );
