@@ -9,7 +9,7 @@ import {
 } from "@/constants";
 
 export async function getHomeDetail() {
-  const res = await fetch(HOME_API, {
+  const res = await fetch(`${HOME_API}`, {
     next: {
       revalidate: 200,
     },
@@ -24,7 +24,7 @@ export async function getHomeDetail() {
 }
 
 export async function getCategories() {
-  const res = await fetch(CATEGORIES_API, {
+  const res = await fetch(`${CATEGORIES_API}`, {
     cache: "force-cache",
   });
   if (!res.ok) {
