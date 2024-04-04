@@ -2,6 +2,7 @@ import React from "react";
 import { getSearchMangas } from "@/app/actions";
 import { notFound } from "next/navigation";
 import CardCustom from "@/app/Components/Card";
+import ScrollToTop from "@/app/Components/ScrollToTop";
 
 const SearchPage = async ({ params }: { params: { keyword: string } }) => {
   const data = await getSearchMangas(params.keyword);
@@ -10,6 +11,7 @@ const SearchPage = async ({ params }: { params: { keyword: string } }) => {
   }
   return (
     <main className="z-10 ">
+      <ScrollToTop/>
       <h1 className="mb-10 text-center 2xl:text-4xl md:text-3xl text-xl text-primary font-bold">
         Tìm kiếm
       </h1>
