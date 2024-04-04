@@ -24,7 +24,7 @@ const Categories = (propsCategory:any) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>Thể loại</DropdownMenuTrigger>
-      <DropdownMenuContent className="w-[400px] mt-4 max-h-[500px] overflow-scroll">
+      <DropdownMenuContent className="xl:w-[400px] max-md:w-[200px] mt-4 max-h-[500px] overflow-scroll">
         {propsCategory.propsCategory?.data?.items.map((category: any, index: number) => (
           <DropdownMenuItem key={category._id} onSelect={()=>handleSelect(category.slug)}>
             {category.name}

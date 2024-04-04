@@ -27,7 +27,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="system">
             <Toaster position="top-center" richColors />
             <Navbar />
-            <div className="mt-40 mb-20">{children}</div>
+            <div className="2xl:mt-40 2xl:mb-20 mt-24 mb-10 md:mt-28 md:mb-14 xl:mt-32 xl:mb-16">{children}</div>
             <Footer />
           </ThemeProvider>
         </main>

@@ -24,6 +24,7 @@ const SelectChapter = ({ mangaSlug, currentChapter }: IProps) => {
   const router = useRouter();
   const [mangaDetailsData, setMangaDetailsData] = useState<any[]>([]);
 
+
   // const handleSelectChapter = (chapterName:string,url:string,mangaSlug:string) => {
   //   router.push(`/chapter/${getChapterId(url)}/${mangaSlug}/${chapterName}`)
   // }
@@ -60,30 +61,17 @@ const SelectChapter = ({ mangaSlug, currentChapter }: IProps) => {
   };
   useEffect(() => {
     const getManga = async () => {
-      const mangaData = await getMangaDetail(mangaSlug);
-      if (!mangaData || mangaData.status != "success") {
-        return (
-          <Select>
-            <SelectTrigger className="w-content min-w-[200px]">
-              <SelectValue placeholder="Select Chapter" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectItem value="">
-                  Cant see any chapters, try again
-                </SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        );
+      const res = await fetch(`/api/get-manga?keyword=${mangaSlug}`);
+      const data = await res.json()
+      if(data){
+        setMangaDetailsData(data?.data?.item.chapters[0]?.server_data);
       }
-      setMangaDetailsData(mangaData?.data?.item.chapters[0]?.server_data);
     };
     getManga();
   }, [mangaSlug]);
 
   return (
-    <main className="flex gap-4">
+    <main className="flex gap-4 max-sm:flex-wrap">
       {mangaDetailsData[0]?.chapter_name === currentChapter ? (
         <Button disabled className="cursor-not-allowed">
           Chap Trước

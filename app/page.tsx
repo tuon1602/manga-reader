@@ -12,8 +12,8 @@ export default async function Home() {
   }
   return (
     <main className="z-10 ">
-      <h1 className="mb-10 text-center text-4xl text-primary font-bold">Cập nhật mới nhất</h1>
-      <section className="grid grid-cols-4 gap-10">
+      <h1 className="mb-10 text-center 2xl:text-4xl md:text-3xl text-xl text-primary font-bold">Cập nhật mới nhất</h1>
+      <section className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
         {data?.data?.items?.map((manga: any, index: any) => (
           <Card key={manga._id} route={manga.slug} status={manga.status} name={manga.name} original_name={manga.origin_name[0]} image={manga.thumb_url} category={manga.category} updatedAt={manga.updatedAt} lastestChapter={manga.chaptersLatest}/>
         ))}

@@ -18,7 +18,7 @@ const MangaDetail = (mangaData: any) => {
       <ScrollToTop />
       {mangaData ? (
         <main className="">
-          <section className="flex flex-wrap gap-20">
+          <section className="flex flex-wrap max-md:gap-5 gap-20 md:grid md:grid-cols-1 xl:flex">
             <div>
               <Image
                 src={`${IMAGE_URL}${data.thumb_url}`}
@@ -26,6 +26,7 @@ const MangaDetail = (mangaData: any) => {
                 width={400}
                 height={100}
                 loading="lazy"
+                className="md:w-full xl:w-[400px]"
               />
 
               <div className="flex justify-end mt-2">
@@ -41,7 +42,7 @@ const MangaDetail = (mangaData: any) => {
               </div>
             </div>
             <div className="flex-1 flex flex-col mt-5 space-y-2">
-              <h1 className="font-bold text-4xl text-primary text-center">
+              <h1 className="font-bold 2xl:text-4xl md:text-3xl text-xl text-primary text-center">
                 {data.name}
               </h1>
               <h2 className="text-slate-500 text-md text-center">
