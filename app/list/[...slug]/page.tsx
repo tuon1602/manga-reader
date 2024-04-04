@@ -7,7 +7,7 @@ const ListPage = async ({ params }: { params: { slug: string } }) => {
   const page  = parseInt(params.slug[1]);
   const data = await getListMangaByKeyword(params.slug[0], page);
   return (
-    <main className="z-10 ">
+    <main className="z-10 overflow-hidden">
       {data?.data && (
         <h1 className="mb-10 text-center 2xl:text-4xl md:text-3xl text-xl text-primary font-bold">
           {data?.data.titlePage}
