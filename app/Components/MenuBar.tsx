@@ -73,7 +73,7 @@ export default function MenuBar() {
                     {open &&
                       categoryData &&
                       categoryData?.data?.items.map((category, index) => (
-                        <Link href={`/the-loai/${category.slug}/1`}>
+                        <Link key={category.id} href={`/the-loai/${category.slug}/1`}>
                           <p className="hover:text-primary ease-in-out duration-300">
                             {category.name}
                           </p>
