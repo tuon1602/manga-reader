@@ -12,7 +12,7 @@ const Navbar = async () => {
   const categories = await getCategories();
   return (
     <main className="fixed w-full z-40 border border-b-primary bg-background shadow-xl backdrop-blur top-0 left-0">
-      <div className="w-full flex xl:justify-around justify-between container items-center py-2 md:p-0 gap-5">
+      <div className="w-full flex justify-between container items-center py-2 md:p-0 gap-5">
         <div className="flex items-center xl:gap-10 2xl:gap-20">
           <Link href="/">
             <Image src={myAva} alt="ava" width={100} height={100} className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]"/>

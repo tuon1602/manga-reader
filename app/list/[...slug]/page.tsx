@@ -2,12 +2,14 @@ import CardCustom from "@/app/Components/Card";
 import { getListMangaByKeyword } from "@/app/actions";
 import React from "react";
 import PaginationCustom from "./_component/PaginationCustom";
+import ScrollToTop from "@/app/Components/ScrollToTop";
 
 const ListPage = async ({ params }: { params: { slug: string } }) => {
-  const page  = parseInt(params.slug[1]);
+  const page = parseInt(params.slug[1]);
   const data = await getListMangaByKeyword(params.slug[0], page);
   return (
     <main className="z-10 overflow-hidden">
+      <ScrollToTop />
       {data?.data && (
         <h1 className="mb-10 text-center 2xl:text-4xl md:text-3xl text-xl text-primary font-bold">
           {data?.data.titlePage}
@@ -29,7 +31,7 @@ const ListPage = async ({ params }: { params: { slug: string } }) => {
         ))}
       </section>
       <div className="mt-10">
-          <PaginationCustom page={data?.data.params} slug={params.slug}/>
+        <PaginationCustom page={data?.data.params} slug={params.slug} />
       </div>
     </main>
   );

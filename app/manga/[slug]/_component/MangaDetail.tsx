@@ -110,6 +110,7 @@ const MangaDetail = (mangaData: any) => {
                             href={`/chapter/${getChapterId(
                               chapter.chapter_api_data
                             )}/${data.slug}/${chapter.chapter_name}`}
+                            className="visited:text-primary"
                           >
                             <span>
                               {data.name} - Chapter {chapter.chapter_name}
@@ -123,6 +124,7 @@ const MangaDetail = (mangaData: any) => {
                             href={`/chapter/${getChapterId(
                               chapter.chapter_api_data
                             )}/${data.slug}/${chapter.chapter_name}`}
+                            className="visited:text-primary"
                           >
                             <span>
                               {data.name} - Chapter {chapter.chapter_name}

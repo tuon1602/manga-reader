@@ -65,32 +65,32 @@ export default function CardCustom({
             />
           </CardTitle>
         </CardHeader>
-        <CardHeader className="pt-0">
-          <CardTitle className="truncate text-xl">{name}</CardTitle>
+        <CardHeader className="max-sm:pt-0">
+          <CardTitle className="truncate text-xl max-sm:text-sm">{name}</CardTitle>
           {original_name.length > 0 ? (
-            <CardDescription className="truncate">
+            <CardDescription className="truncate max-sm:text-sm">
               {original_name}
             </CardDescription>
           ) : (
-            <CardDescription>.</CardDescription>
+            <CardDescription className="truncate max-sm:text-sm">.</CardDescription>
           )}
         </CardHeader>
-        <CardContent>
-          <h2>
+        <CardContent  className="max-sm:pt-0">
+          <h2 className="truncate max-sm:text-sm">
             Trạng thái: <span className="text-primary font-bold">{status}</span>
           </h2>
           {lastestChapter && lastestChapter.map((item, index) => (
-            <h3 key={index} className="mt-[5px]">
+            <h3 key={index} className="mt-[5px] truncate max-sm:text-sm">
               Tập{" "}
               <span className="text-primary font-bold">
                 {item.chapter_name}
               </span>
             </h3>
           ))}
-          {author && <h2>Tác giá: <span className="text-primary font-bold">{author}</span></h2>}
+          {author && <h2>Tác giá: <span className="text-primary font-bold truncate max-sm:text-sm">{author}</span></h2>}
           <span className="text-sm">
             Ngày đăng tải:{" "}
-            <span className="text-primary font-bold">
+            <span className="text-primary font-bold truncate">
               {moment(updatedAt).format("DD-MM-YYYY")}
             </span>
           </span>

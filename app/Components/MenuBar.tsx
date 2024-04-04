@@ -33,7 +33,7 @@ export default function MenuBar() {
   }, []);
   return (
     <Drawer.Root direction="right">
-      <Drawer.Trigger asChild>
+      <Drawer.Trigger>
         <Menu className="text-primary" />
       </Drawer.Trigger>
       <Drawer.Portal>
