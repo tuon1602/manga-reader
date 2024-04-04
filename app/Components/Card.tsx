@@ -55,13 +55,13 @@ export default function CardCustom({
     <Link href={`/manga/${route}`}>
       <Card className="max-h-content shadow">
         <CardHeader className="pt-0 px-0">
-          <CardTitle className="w-full h-[300px] relative">
+          <CardTitle className="w-full h-[400px] relative">
             <Image
               src={`${IMAGE_URL}${image}`}
               alt={`${name}`}
               loading="lazy"
               fill
-              className="rounded-t-[0.75rem] z-[20]"
+              className="rounded-t-[0.75rem] z-[20] "
             />
           </CardTitle>
         </CardHeader>
