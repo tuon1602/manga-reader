@@ -2,12 +2,14 @@ import React from 'react'
 import { getMangaByCategory } from '@/app/actions';
 import CardCustom from '@/app/Components/Card';
 import PaginationCustom from './_component/PagninationCustom';
+import ScrollToTop from '@/app/Components/ScrollToTop';
 
 const CategoryPage = async ({ params }: { params: { slug: string } }) => {
     const page  = parseInt(params.slug[1]);
     const data = await getMangaByCategory(params.slug[0], page);
     return (
       <main className="z-10 overflow-hidden">
+        <ScrollToTop/>
         {data?.data && (
           <h1 className="mb-10 text-center 2xl:text-4xl md:text-3xl text-xl text-primary font-bold">
             Thể loại: {data?.data.titlePage}
