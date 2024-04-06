@@ -75,7 +75,7 @@ export default function MenuBar() {
                       <ChevronUp />
                     </div>
                   )}
-                  <div className="grid grid-cols-2 gap-2 md:max-h-[450px] max-md:max-h-[300px] overflow-scroll">
+                  <div className="grid grid-cols-2 gap-2 md:max-h-[450px] max-md:max-h-[300px] overflow-scroll md:overflow-x-hidden">
                     {open &&
                       categoryData &&
                       categoryData?.data?.items.map((category, index) => (
