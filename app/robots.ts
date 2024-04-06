@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow:'/chapter'
     },
     sitemap: 'https://manga-reader-six.vercel.app/sitemap.xml',
   }
