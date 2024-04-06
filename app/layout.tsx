@@ -42,7 +42,7 @@ export default function RootLayout({
       </head>
       <body>
         <main className={`${inter.className} container min-h-screen`}>
-          <ThemeProvider attribute="class" defaultTheme="system">
+          <ThemeProvider attribute="class" defaultTheme="dark">
             <Toaster position="top-center" richColors />
             <Navbar />
             <div className="2xl:pt-40 2xl:pb-20 pt-24 pb-10 md:pt-28 md:pb-14 xl:pt-32 xl:pb-16">
