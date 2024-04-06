@@ -24,7 +24,6 @@ const SelectChapter = ({ mangaSlug, currentChapter }: IProps) => {
   const router = useRouter();
   const [mangaDetailsData, setMangaDetailsData] = useState<any[]>([]);
 
-
   // const handleSelectChapter = (chapterName:string,url:string,mangaSlug:string) => {
   //   router.push(`/chapter/${getChapterId(url)}/${mangaSlug}/${chapterName}`)
   // }
@@ -40,30 +39,32 @@ const SelectChapter = ({ mangaSlug, currentChapter }: IProps) => {
   };
 
   const handleGetPreviousChapter = () => {
-    const chapterNeedToFind = mangaDetailsData.find(
-      (chapter, index) => chapter.chapter_name == parseInt(currentChapter) - 1
+    const currentIndex = mangaDetailsData.findIndex(
+      (chapter) => chapter.chapter_name === currentChapter
     );
+    const previousChapter = mangaDetailsData[currentIndex - 1];
     router.push(
       `/chapter/${getChapterId(
-        chapterNeedToFind.chapter_api_data
-      )}/${mangaSlug}/${chapterNeedToFind.chapter_name}`
+        previousChapter.chapter_api_data
+      )}/${mangaSlug}/${previousChapter.chapter_name}`
     );
   };
   const handleGetNextChapter = () => {
-    const chapterNeedToFind = mangaDetailsData.find(
-      (chapter, index) => chapter.chapter_name == parseInt(currentChapter) + 1
+    const currentIndex = mangaDetailsData.findIndex(
+      (chapter) => chapter.chapter_name === currentChapter
     );
+    const nextChapter = mangaDetailsData[currentIndex + 1];
     router.push(
-      `/chapter/${getChapterId(
-        chapterNeedToFind.chapter_api_data
-      )}/${mangaSlug}/${chapterNeedToFind.chapter_name}`
+      `/chapter/${getChapterId(nextChapter.chapter_api_data)}/${mangaSlug}/${
+        nextChapter.chapter_name
+      }`
     );
   };
   useEffect(() => {
     const getManga = async () => {
       const res = await fetch(`/api/get-manga?keyword=${mangaSlug}`);
-      const data = await res.json()
-      if(data){
+      const data = await res.json();
+      if (data) {
         setMangaDetailsData(data?.data?.item.chapters[0]?.server_data);
       }
     };
