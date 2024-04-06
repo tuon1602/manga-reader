@@ -45,7 +45,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="dark">
             <Toaster position="top-center" richColors />
             <Navbar />
-            <div className="2xl:pt-40 2xl:pb-20 pt-24 pb-10 md:pt-28 md:pb-14 xl:pt-32 xl:pb-16">
+            <div className="2xl:pt-40 2xl:pb-20 pt-24 pb-10 md:pt-[8.5rem] md:pb-14 xl:pt-36 xl:pb-16">
               {children}
             </div>
             <Footer />
