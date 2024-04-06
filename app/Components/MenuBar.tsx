@@ -20,6 +20,11 @@ export default function MenuBar() {
     data: { items: Category[] };
   } | null>(null);
   const [open, setOpen] = useState<Boolean>(false);
+  const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
+
+  const handleCloseDrawer = ( )=>{
+    setDrawerOpen(!drawerOpen)
+  }
   useEffect(() => {
     const fetchCategoriesData = async () => {
       try {
@@ -32,7 +37,7 @@ export default function MenuBar() {
     fetchCategoriesData();
   }, []);
   return (
-    <Drawer.Root direction="right">
+    <Drawer.Root direction="right" open={drawerOpen} onOpenChange={setDrawerOpen}>
       <Drawer.Trigger>
         <Menu className="text-primary" />
       </Drawer.Trigger>
@@ -43,13 +48,14 @@ export default function MenuBar() {
             <div className="max-w-md mx-auto text-black">
               <div className="flex flex-col gap-5">
                 {NavLinks.map((link, index) => (
-                  <Link
-                    key={index}
-                    href={`${link.route}`}
-                    className="text-primary dark:hover:text-primary hover:text-primary hover:duration-200 hover:ease-in-out"
-                  >
-                    {link.label}
-                  </Link>
+                    <Link
+                      key={index}
+                      href={`${link.route}`}
+                      className="text-primary dark:hover:text-primary hover:text-primary hover:duration-200 hover:ease-in-out w-full"
+                      onClick={handleCloseDrawer}
+                    >
+                      {link.label}
+                    </Link>
                 ))}
                 <div className="flex flex-col gap-2">
                   {open ? (
@@ -69,11 +75,15 @@ export default function MenuBar() {
                       <ChevronUp />
                     </div>
                   )}
-                  <div className="grid grid-cols-2 gap-2 md:max-h-[450px] max-md:max-h-[150px] overflow-scroll">
+                  <div className="grid grid-cols-2 gap-2 md:max-h-[450px] max-md:max-h-[300px] overflow-scroll">
                     {open &&
                       categoryData &&
                       categoryData?.data?.items.map((category, index) => (
-                        <Link key={category.id} href={`/the-loai/${category.slug}/1`}>
+                        <Link
+                          key={category.id}
+                          href={`/the-loai/${category.slug}/1`}
+                          onClick={handleCloseDrawer}
+                        >
                           <p className="hover:text-primary ease-in-out duration-300">
                             {category.name}
                           </p>

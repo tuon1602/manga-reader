@@ -87,12 +87,12 @@ const MangaDetail = (mangaData: any) => {
                 </p>
                 {sorted ? (
                   <ArrowUp10
-                    className="cursor-pointer"
+                    className="cursor-pointer text-primary"
                     onClick={() => setSorted(!sorted)}
                   />
                 ) : (
                   <ArrowDown01
-                    className="cursor-pointer"
+                    className="cursor-pointer text-primary"
                     onClick={() => setSorted(!sorted)}
                   />
                 )}
