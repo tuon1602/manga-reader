@@ -1,33 +1,34 @@
+import { CURRENT_DOMAIN } from "@/constants";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://manga-reader-six.vercel.app",
+      url: `${CURRENT_DOMAIN}`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,
     },
     {
-      url: "https://manga-reader-six.vercel.app/chapter",
+      url: `${CURRENT_DOMAIN}/chapter`,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
-      url: "https://manga-reader-six.vercel.app/list",
+      url: `${CURRENT_DOMAIN}/list`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,
     },
     {
-      url: "https://manga-reader-six.vercel.app/the-loai",
+      url: `${CURRENT_DOMAIN}/the-loai`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,
     },
     {
-      url: "https://manga-reader-six.vercel.app/manga",
+      url: `${CURRENT_DOMAIN}/manga`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.6,

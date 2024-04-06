@@ -22,7 +22,7 @@ const MangaDetail = (mangaData: any) => {
             <div>
               <Image
                 src={`${IMAGE_URL}${data.thumb_url}`}
-                alt={`${mangaData.name}`}
+                alt={`${data.name}`}
                 width={400}
                 height={100}
                 loading="lazy"

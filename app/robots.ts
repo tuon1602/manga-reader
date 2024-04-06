@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { CURRENT_DOMAIN } from '@/constants'
  
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow:'/chapter'
     },
-    sitemap: 'https://manga-reader-six.vercel.app/sitemap.xml',
+    sitemap: `${CURRENT_DOMAIN}/sitemap.xml`,
   }
 }
