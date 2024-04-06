@@ -60,7 +60,7 @@ const ChapterPage = async ({ params }: { params: { slug: string } }) => {
             src={`${imageData.data.domain_cdn}/${imageData.data.item.chapter_path}/${img.image_file}`}
             alt={`${imageData.data.item.comic_name}`}
             loading="lazy"
-            width={1000}
+            width={768}
             height={500}
             className="object-contain"
           />

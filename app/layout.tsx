@@ -22,12 +22,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main
-          className={`${inter.className} container max-md:py-0  min-h-screen`}
+          className={`${inter.className} container min-h-screen`}
         >
           <ThemeProvider attribute="class" defaultTheme="system">
             <Toaster position="top-center" richColors />
             <Navbar />
-            <div className="2xl:mt-40 2xl:mb-20 mt-24 mb-10 md:mt-28 md:mb-14 xl:mt-32 xl:mb-16">{children}</div>
+            <div className="2xl:pt-40 2xl:pb-20 pt-24 pb-10 md:pt-28 md:pb-14 xl:pt-32 xl:pb-16">{children}</div>
             <Footer />
           </ThemeProvider>
         </main>
