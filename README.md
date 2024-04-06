@@ -1,6 +1,6 @@
 
 ## Sumary
-This is my personal manga website for learning Nextjs and the reason why i decided to do this project is i used to want to created an manga website
+This is my personal manga website, created for learning Next.js. I embarked on this project because of my passion for manga and a desire to develop a manga website. Through building this site, I aim to enhance my skills in Next.js while also catering to the interests of manga enthusiasts like myself
 
 ## Tech
 - [Nextjs](https://nextjs.org/)
