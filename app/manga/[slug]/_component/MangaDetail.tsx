@@ -37,7 +37,7 @@ const MangaDetail = (mangaData: any) => {
                   target="_blank"
                   className="bg-primary rounded-sm p-2 w-full text-center text-white"
                 >
-                  Đọc chuyện
+                  Đọc truyện
                 </Link>
               </div>
             </div>
