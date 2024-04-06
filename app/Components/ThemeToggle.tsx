@@ -13,11 +13,11 @@ export function ThemeToggle() {
   return (
     <>
       { hasMounted && theme === "light" ? (
-        <Button onClick={() => setTheme("dark")} className="flex justify-center items-center">
+        <Button aria-label="dark mode button" onClick={() => setTheme("dark")} className="flex justify-center items-center">
           <Sun className="h-5 w-5"/>
         </Button>
       ) : (
-        <Button onClick={() => setTheme("light")} className="flex justify-center items-center">
+        <Button aria-label="light mode button" onClick={() => setTheme("light")} className="flex justify-center items-center">
           <Moon className="h-5 w-5"/>
         </Button>
       )}

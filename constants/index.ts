@@ -2,8 +2,6 @@ export const IMAGE_URL = "https://img.otruyenapi.com/uploads/comics/"
 export const IMAGE_SEO_URL = "https://img.otruyenapi.com"
 
 
-
-
 export const CURRENT_DOMAIN = process.env.CURRENT_DOMAIN
 export const HOME_API = process.env.HOME_API
 export const CATEGORIES_API= process.env.CATEGORIES_API

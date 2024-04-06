@@ -76,9 +76,9 @@ export default function CardCustom({
           )}
         </CardHeader>
         <CardContent  className="max-sm:pt-0">
-          <h2 className="truncate max-sm:text-sm">
+          <h3 className="truncate max-sm:text-sm">
             Trạng thái: <span className="text-primary font-bold">{status}</span>
-          </h2>
+          </h3>
           {lastestChapter && lastestChapter.map((item, index) => (
             <h3 key={index} className="mt-[5px] truncate max-sm:text-sm">
               Tập{" "}
