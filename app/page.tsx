@@ -6,7 +6,6 @@ import { notFound } from "next/navigation";
 import Card from "./Components/Card";
 import HeroCarousel from "./Components/HeroCarousel";
 
-export async function generateMetaData() {}
 
 export default async function Home() {
   const data = await getHomeDetail();
