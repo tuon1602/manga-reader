@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Sumary
+This is my personal manga website, created for learning Next.js. I embarked on this project because of my passion for manga and a desire to develop a manga website. Through building this site, I aim to enhance my skills in Next.js while also catering to the interests of manga enthusiasts like myself
 
-First, run the development server:
+## Tech
+- [Nextjs](https://nextjs.org/)
+- [Tailwindcss](https://tailwindcss.com/)
+- [ShadcnUi](https://ui.shadcn.com/)
+- Vaul Drawer (Which is in shadcn docs)
+- Embla carousel (Which is in shadcn docs)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- Listing mangas by status
+- Searching mangas
+- Find manga by categories
+- Be able to see every manga details
+- Be able to read chapters
+- Darkmode/Lightmode
+- Responsive
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Desktop results
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![image](https://github.com/tuon1602/manga-reader/assets/68351005/8d6d94e4-09b2-4ac7-82a9-ab8b835b81ea)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![image](https://github.com/tuon1602/manga-reader/assets/68351005/3dc2d3c9-ac22-4a69-82cc-387ee4d25bed)
 
-## Learn More
+![image](https://github.com/tuon1602/manga-reader/assets/68351005/b5bece42-886d-44cc-a65e-afa86933e138)
 
-To learn more about Next.js, take a look at the following resources:
+![image](https://github.com/tuon1602/manga-reader/assets/68351005/6e4e468d-58b1-496e-8257-8760a6d785b5)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Mobile results
+![image](https://github.com/tuon1602/manga-reader/assets/68351005/fccc62b9-158e-4761-92c7-608d7e06c443)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![image](https://github.com/tuon1602/manga-reader/assets/68351005/006f4beb-1e9e-45c1-bb07-da9c8dc3b9e3)
 
-## Deploy on Vercel
+![image](https://github.com/tuon1602/manga-reader/assets/68351005/5315e013-1f8f-401a-9ddb-d1383e620d21)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![image](https://github.com/tuon1602/manga-reader/assets/68351005/55823406-a292-4154-8194-2c7a0d56dfcc)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
+
+
