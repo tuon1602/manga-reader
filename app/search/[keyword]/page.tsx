@@ -4,6 +4,30 @@ import { notFound } from "next/navigation";
 import CardCustom from "@/app/Components/Card";
 import ScrollToTop from "@/app/Components/ScrollToTop";
 
+import { Metadata, ResolvingMetadata } from "next";
+import { IMAGE_SEO_URL } from '@/constants';
+
+type Props = {
+  params: { keyword: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const res = await getSearchMangas(params.keyword);
+  const homeSeo = res.data.seoOnPage;
+  return {
+    title:homeSeo.titleHead,
+    openGraph: {
+      title: homeSeo.titleHead,
+      type: homeSeo.og_type,
+      images: homeSeo.og_image.map((image:string)=> IMAGE_SEO_URL+ image)
+    },
+  };
+}
+
 const SearchPage = async ({ params }: { params: { keyword: string } }) => {
   const data = await getSearchMangas(params.keyword);
   if (!data || data.status !== "success") {

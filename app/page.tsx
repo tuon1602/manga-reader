@@ -5,7 +5,32 @@ import { getHomeDetail } from "./actions";
 import { notFound } from "next/navigation";
 import Card from "./Components/Card";
 import HeroCarousel from "./Components/HeroCarousel";
+import { IMAGE_SEO_URL } from "@/constants";
 
+import { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const res = await getHomeDetail();
+  const homeSeo = res.data.seoOnPage;
+
+
+  return {
+    openGraph: {
+      title: homeSeo.titleHead,
+      description: homeSeo.descriptionHead,
+      type: homeSeo.og_type,
+      images: homeSeo.og_image.map((image:string)=> IMAGE_SEO_URL+ image)
+    },
+  };
+}
 
 export default async function Home() {
   const data = await getHomeDetail();

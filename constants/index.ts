@@ -1,4 +1,5 @@
 export const IMAGE_URL = "https://img.otruyenapi.com/uploads/comics/"
+export const IMAGE_SEO_URL = "https://img.otruyenapi.com"
 
 
 export const HOME_API = process.env.HOME_API
