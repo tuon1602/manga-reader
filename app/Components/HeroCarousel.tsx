@@ -28,13 +28,12 @@ const HeroCarousel = () => {
       <CarouselContent>
         {carouselItems.map((carousel, index) => (
           <CarouselItem key={index}>
-            <Card className="relative border-0">
+            <Card className="relative border-0 w-full md:h-[400px] h-[200px] lg:h-[600px] xl:h-[700px]">
               <Image
                 src={carousel.imageUrl}
                 alt=""
-                width={1920}
-                height={1080}
-                className="object-cover w-full 2xl:h-[700px] max-md:h-[200px] md:h-[400px] dark:opacity-60"
+                fill
+                className="object-cover  dark:opacity-60"
               />
               <CardContent className="absolute bottom-[10%] max-md:bottom-0 left-0 space-y-5 max-md:space-y-1">
                 <h1 className="text-primary xl:text-5xl md:text-4xl font-extrabold max-md:text-lg">
