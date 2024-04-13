@@ -43,7 +43,7 @@ export default async function Home() {
       <h1 className="mb-10 text-center 2xl:text-4xl md:text-3xl text-xl text-primary font-bold mt-10">
         Cập nhật mới nhất
       </h1>
-      <section className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5 mt-10">
+      <section className="grid 2xl:grid-cols-6 xl:grid-cols-5 md:grid-cols-4 grid-cols-4 gap-3 mt-10">
         {data?.data?.items?.map((manga: any, index: any) => (
           <Card
             key={manga._id}

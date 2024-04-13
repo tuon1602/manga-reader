@@ -40,7 +40,7 @@ const CategoryPage = async ({ params }: { params: { slug: string } }) => {
             Thể loại: {data?.data.titlePage}
           </h1>
         )}
-        <section className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
+        <section className="grid 2xl:grid-cols-6 xl:grid-cols-5 md:grid-cols-4 grid-cols-4 gap-3">
           {data?.data?.items?.map((manga: any, index: any) => (
             <CardCustom
               key={manga._id}
