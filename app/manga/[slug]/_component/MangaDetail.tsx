@@ -15,7 +15,6 @@ const MangaDetail = (mangaData: any) => {
   const data = mangaData.mangaData;
   return (
     <>
-      <ScrollToTop />
       {mangaData ? (
         <main className="">
           <section className="flex flex-wrap max-md:gap-5 gap-20 md:grid md:grid-cols-1 xl:flex">

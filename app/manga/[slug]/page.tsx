@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 
 import { Metadata, ResolvingMetadata } from "next";
 import { IMAGE_SEO_URL } from "@/constants";
+import Suggestion from "./_component/Suggestion";
+import ScrollToTop from "@/app/Components/ScrollToTop";
 
 type Props = {
   params: { slug: string };
@@ -36,9 +38,12 @@ const MangaDetailPage = async ({ params }: { params: { slug: string } }) => {
   if (!detailData || detailData.status !== "success") {
     notFound();
   }
+  console.log(detailData.data.item.category[0])
   return (
     <main>
+      <ScrollToTop/>
       <MangaDetail mangaData={detailData.data.item}/>
+      <Suggestion category={detailData.data.item.category[0]}/>
     </main>
   );
 };
