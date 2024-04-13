@@ -18,6 +18,9 @@ This is my personal manga website, created for learning Next.js. I embarked on t
 - Darkmode/Lightmode
 - Responsive
 
+## Need to Upgrade
+- Currently now, i dont have any ideas for this project anymore, but you can contact me and give some ideas. I really enjoy it :)
+
 ## Desktop results
 
 ![image](https://github.com/tuon1602/manga-reader/assets/68351005/8d6d94e4-09b2-4ac7-82a9-ab8b835b81ea)
