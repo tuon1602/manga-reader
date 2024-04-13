@@ -40,7 +40,7 @@ const SearchPage = async ({ params }: { params: { keyword: string } }) => {
         Tìm kiếm
       </h1>
       {data?.data?.items.length > 0 ? (
-        <section className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
+        <section className="grid 2xl:grid-cols-6 xl:grid-cols-5 md:grid-cols-4 grid-cols-4 gap-3">
           {data?.data?.items?.map((manga: any, index: any) => (
             <CardCustom
               key={manga._id}
