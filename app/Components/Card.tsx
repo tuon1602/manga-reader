@@ -60,7 +60,7 @@ export default function CardCustom({
   return (
     <TooltipProvider delayDuration={2}>
       <Tooltip>
-        <TooltipTrigger>
+        <TooltipTrigger className="text-start">
           {" "}
           <Link href={`/manga/${route}`}>
             <Card className="max-h-content shadow max-sm:border-0">
