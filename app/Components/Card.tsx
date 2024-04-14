@@ -94,7 +94,7 @@ export default function CardCustom({
                   Trạng thái:{" "}
                   <span className="text-primary font-bold">{status}</span>
                 </h3>
-                {lastestChapter &&
+                {lastestChapter && lastestChapter?.length > 0 ? (
                   lastestChapter.map((item, index) => (
                     <h3
                       key={index}
@@ -105,7 +105,15 @@ export default function CardCustom({
                         {item.chapter_name}
                       </span>
                     </h3>
-                  ))}
+                  ))
+                ) : (
+                  <h3 className="mt-[5px] truncate max-sm:text-xs">
+                    Tập{" "}
+                    <span className="text-primary font-bold max-sm:text-xs">
+                      unknown
+                    </span>
+                  </h3>
+                )}
                 {author && (
                   <h2>
                     Tác giá:{" "}
@@ -134,7 +142,9 @@ export default function CardCustom({
             </Card>
           </Link>
         </TooltipTrigger>
-        <TooltipContent><p>{name}</p></TooltipContent>
+        <TooltipContent>
+          <p>{name}</p>
+        </TooltipContent>
       </Tooltip>
     </TooltipProvider>
   );
