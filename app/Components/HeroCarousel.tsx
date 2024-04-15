@@ -31,7 +31,9 @@ const HeroCarousel = () => {
             <Card className="relative border-0 w-full md:h-[400px] h-[200px] lg:h-[600px] xl:h-[700px]">
               <Image
                 src={carousel.imageUrl}
-                alt=""
+                alt={carousel.name}
+                sizes="(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 80vw"
+                loading="eager"
                 fill
                 className="object-cover  dark:opacity-60"
               />
