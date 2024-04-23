@@ -19,7 +19,8 @@ This is my personal manga website, created for learning Next.js. I embarked on t
 - Responsive
 
 ## Need to Upgrade
-- Currently now, i dont have any ideas for this project anymore, but you can contact me and give some ideas. I really enjoy it :)
+- Multiple Languages
+- Scroll Manga pictures by horizontal
 
 ## Desktop results
 
