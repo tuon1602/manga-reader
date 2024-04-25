@@ -21,6 +21,7 @@ This is my personal manga website, created for learning Next.js. I embarked on t
 ## Need to Upgrade
 - Multiple Languages
 - Scroll Manga pictures by horizontal
+- Comment section
 
 ## Desktop results
 
