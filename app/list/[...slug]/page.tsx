@@ -11,20 +11,38 @@ type Props = {
   params: { slug: string };
   searchParams: { [key: string]: string | string[] | undefined };
 };
-
+export function generateStaticParams() {
+  return [
+    { slug: ["truyen-moi", "1"] },
+    { slug: ["truyen-moi", "2"] },
+    { slug: ["truyen-moi", "3"] },
+    { slug: ["sap-ra-mat", "1"] },
+    { slug: ["sap-ra-mat", "2"] },
+    { slug: ["sap-ra-mat", "3"] },
+    { slug: ["dang-phat-hanh", "1"] },
+    { slug: ["dang-phat-hanh", "2"] },
+    { slug: ["dang-phat-hanh", "3"] },
+    { slug: ["hoan-thanh", "1"] },
+    { slug: ["hoan-thanh", "2"] },
+    { slug: ["hoan-thanh", "3"] },
+  ];
+}
 
 export async function generateMetadata(
   { params, searchParams }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const res = await getListMangaByKeyword(params.slug[0],parseInt(params.slug[1]));
+  const res = await getListMangaByKeyword(
+    params.slug[0],
+    parseInt(params.slug[1])
+  );
   const homeSeo = res.data.seoOnPage;
   return {
     openGraph: {
       title: homeSeo.titleHead,
       description: homeSeo.descriptionHead,
       type: homeSeo.og_type,
-      images: homeSeo.og_image.map((image:string)=> IMAGE_SEO_URL+ image)
+      images: homeSeo.og_image.map((image: string) => IMAGE_SEO_URL + image),
     },
   };
 }
